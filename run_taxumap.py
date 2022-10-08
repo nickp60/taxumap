@@ -108,6 +108,10 @@ if __name__ == "__main__":
         outpath = args.outdir
         if outpath[-1] != "/":
             outpath = outpath + "/"
+        if not os.path.exists():
+            os.makedirs(outpath)
+        else:
+            print("Using existing output directory")
     else:
         outpath = "./"
 
